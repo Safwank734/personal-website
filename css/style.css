@@ -1,25 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
-
-/*===== VARIABLES CSS =====*/
-
 :root {
     --header-height: 3rem;
     --font-medium: 500;
 }
-
-
-/*===== Colores =====*/
-
 :root {
     --first-color: #000000;
     --white-color: #FAFAFF;
     --dark-color: #2A3B47;
     --text-color: #697477;
 }
-
-
-/*===== Fuente y tipografia =====*/
-
 :root {
     --body-font: 'Montserrat', sans-serif;
     --big-font-size: 6.25rem;
@@ -27,7 +16,6 @@
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
 }
-
 @media screen and (min-width: 768px) {
      :root {
         --big-font-size: 10.5rem;
@@ -36,27 +24,15 @@
         --small-font-size: .875rem;
     }
 }
-
-
-/*===== Margenes =====*/
-
 :root {
     --mb-1: .5rem;
     --mb-2: 1rem;
     --mb-3: 1.5rem;
     --mb-4: 2rem;
 }
-
-
-/*===== z index =====*/
-
 :root {
     --z-fixed: 100;
 }
-
-
-/*===== BASE =====*/
-
 *,
 ::before,
 ::after {
@@ -98,14 +74,9 @@ img {
     height: auto;
     display: block;
 }
-
-
-/*===== CLASS CSS ===== */
-
 .section {
     padding: 3rem 0;
 }
-
 .section-title {
     position: relative;
     font-size: var(--h2-font-size);
@@ -113,7 +84,6 @@ img {
     margin: var(--mb-4) 0;
     text-align: center;
 }
-
 .section-title::after {
     position: absolute;
     content: "";
@@ -125,10 +95,6 @@ img {
     top: 2rem;
     background-color: var(--first-color);
 }
-
-
-/*===== LAYOUT =====*/
-
 .bd-grid {
     max-width: 1024px;
     display: grid;
@@ -147,17 +113,12 @@ img {
     z-index: var(--z-fixed);
     background-color: var(--first-color);
 }
-
-
-/*===== NAV =====*/
-
 .nav {
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 @media screen and (max-width: 768px) {
     .nav__menu {
         position: fixed;
@@ -171,40 +132,27 @@ img {
         backdrop-filter: blur(10px);
     }
 }
-
 .nav__item {
     margin-bottom: var(--mb-4);
 }
-
 .nav__link {
     position: relative;
     color: var(--dark-color);
 }
-
 .nav__link:hover {
     color: var(--first-color);
 }
-
 .nav__logo {
     color: var(--white-color);
 }
-
 .nav__toggle {
     color: var(--white-color);
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-
-/*=== Show menu ===*/
-
 .show {
     right: 0;
 }
-
-
-/*Active menu*/
-
 .active::after {
     position: absolute;
     content: "";
@@ -214,53 +162,39 @@ img {
     top: 2rem;
     background-color: var(--first-color);
 }
-
-
-/*===== HOME =====*/
-
 .home {
     position: relative;
     background-color: var(--first-color);
     overflow: hidden;
 }
-
 .home__container {
     height: calc(100vh - var(--header-height));
     row-gap: 5rem;
 }
-
 .home__title {
     align-self: flex-end;
     font-size: var(--big-font-size);
     color: var(--white-color);
     line-height: .8;
 }
-
 .home__title span {
     text-shadow: 0 20px 25px rgba(0, 0, 0, .5);
 }
-
 .home__scroll {
     align-self: flex-end;
     padding-bottom: var(--mb-4);
 }
-
 .home__scroll-link {
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     color: var(--white-color);
 }
-
 .home__img {
     position: absolute;
     right: 0;
     bottom: 0;
     width: 295px;
 }
-
-
-/* ===== ABOUT =====*/
-
 .about__container {
     justify-items: center;
     row-gap: 2rem;
@@ -305,10 +239,6 @@ img {
 .about__social-icon:hover {
     color: var(--first-color);
 }
-
-
-/* ===== SKILLS =====*/
-
 .skills__container {
     row-gap: 2rem;
 }
@@ -336,54 +266,6 @@ img {
 .skills__img img {
     border-radius: .5rem;
 }
-
-
-/* ===== PORTFOLIO =====*/
-
-.portfolio {
-    background-color: var(--white-color);
-}
-
-.portfolio__container {
-    justify-items: center;
-    row-gap: 2rem;
-}
-
-.portfolio__img {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio__img img {
-    border-radius: .5rem;
-}
-
-.portfolio__link {
-    position: absolute;
-    bottom: -100%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, .3);
-    border-radius: .5rem;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    transition: .3s;
-}
-
-.portfolio__img:hover .portfolio__link {
-    bottom: 0;
-}
-
-.portfolio__link-name {
-    color: var(--dark-color);
-}
-
-
-/* ===== CONTACT =====*/
-
 .contact__container {
     row-gap: 2rem;
 }
@@ -426,10 +308,6 @@ img {
     font-size: var(--normal-font-size);
     cursor: pointer;
 }
-
-
-/* ===== FOOTER=====*/
-
 .footer {
     background-color: var(--dark-color);
 }
@@ -460,10 +338,6 @@ img {
 .footer__social:hover {
     color: var(--first-color);
 }
-
-
-/* ===== MEDIA QUERIES =====*/
-
 @media screen and (min-width: 768px) {
     body {
         margin: 0;
